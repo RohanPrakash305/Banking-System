@@ -20,9 +20,9 @@ public class Signup extends JFrame implements ActionListener {
     {
         super("APPLICATION  FORM");
 
-        ImageIcon i1= new ImageIcon(ClassLoader.getSystemResource("icons/bank.png"));
+        ImageIConnect i1= new ImageIConnect(ClassLoader.getSystemResource("iConnects/bank.png"));
         Image i2 = i1.getImage().getScaledInstance(100,100, Image.SCALE_DEFAULT);
-        ImageIcon i3= new ImageIcon(i2);
+        ImageIConnect i3= new ImageIConnect(i2);
         JLabel image = new JLabel(i3);
         image.setBounds(25,10,100,100);
         add(image);
@@ -168,7 +168,7 @@ public class Signup extends JFrame implements ActionListener {
 
 
 
-        getContentPane().setBackground(new Color( 222,255,228));
+        getConnecttentPane().setBackground(new Color( 222,255,228));
         setLayout(null);
         setSize(800,790);
         setLocation(360,40);
@@ -213,9 +213,9 @@ public class Signup extends JFrame implements ActionListener {
                 JOptionPane.showMessageDialog(null,"Fill all the field");
             }
             else {
-                Con con1 = new Con();
+                Connect Connect1 = new Connect();
                 String q = "insert into signup values('" + foramno + "', '" + name + "','" + fname + "','" + gender + "','" + email + "','" + marital + "','" + address + "','" + city + "','" + pincode + "' )";
-                con1.statement.executeUpdate(q);
+                Connect1.statement.executeUpdate(q);
                 new Sinup2();
                 setVisible(false);
             }
